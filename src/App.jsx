@@ -13,6 +13,76 @@ import VariableScope from "./javascript/variable-scope/VariableScope";
 import WindowObject from "./javascript/window-object/WindowObject";
 import React from "./react/React";
 
+const routes = [
+  {
+    path: "javascript",
+    subroutes: [
+      { path: "prototypes", content: Prototypes },
+      { path: "higher-order-functions", content: HigherOrderFunctions },
+      { path: "packages", content: Packages },
+      { path: "callback", content: Callback },
+      { path: "async", content: Async },
+      { path: "event-bubbling", content: EventBubbling },
+      { path: "promises", content: Promises },
+      { path: "storage", content: Storage },
+      { path: "variable-scope", content: VariableScope },
+      { path: "window-object", content: WindowObject },
+    ],
+  },
+  {
+    path: "react",
+    subroutes: [
+      { path: "component-basic", content: React },
+      { path: "jsx", content: React },
+      { path: "props-state", content: React },
+      { path: "component-lifecycle", content: React },
+      { path: "event-handling", content: React },
+      { path: "conditional-rendering", content: React },
+      { path: "lists-keys", content: React },
+      { path: "forms", content: React },
+      { path: "hooks", content: React },
+      { path: "error-handling", content: React },
+      { path: "lifting-state-up", content: React },
+    ],
+  },
+  {
+    path: "other",
+    subroutes: [
+      {
+        path: "router",
+        subroutes: [
+          { path: "basics", content: React },
+          { path: "navigation", content: React },
+          { path: "sub-routes", content: React },
+        ],
+      },
+      {
+        path: "security",
+        subroutes: [
+          { path: "jwt", content: React },
+          { path: "cors", content: React },
+        ],
+      },
+      {
+        path: "styling",
+        subroutes: [
+          { path: "flexbox-grid", content: React },
+          { path: "media-queries", content: React },
+          { path: "design-principles", content: React },
+        ],
+      },
+      {
+        path: "deployment",
+        subroutes: [
+          { path: "docker", content: React },
+          { path: "domain", content: React },
+          { path: "https", content: React },
+        ],
+      },
+    ],
+  },
+];
+
 function App() {
   return (
     <div>
