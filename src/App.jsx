@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import "./App.css";
 import Prototypes from "./javascript/prototypes/Prototypes";
@@ -12,73 +13,68 @@ import Storage from "./javascript/storage/Storage";
 import VariableScope from "./javascript/variable-scope/VariableScope";
 import WindowObject from "./javascript/window-object/WindowObject";
 import React from "./react/React";
+import CodeExecutor from "./CodeExecutor";
+import ComponentBasic from "./react/component-basic/ComponentBasic";
+import JSXExample from "./react/jsx/JSXExample";
+import PropState from "./react/props-state/PropsState";
+import ComponentLifeCycle from "./react/component-lifecycle/ComponentLifecycle";
+import EventHandling from "./react/event-handling/EventHandling";
+import ConditionalRendering from "./react/conditional-rendering/ConditionalRendering";
+import ListsKeys from "./react/lists-keys/ListsKeys";
+import Forms from "./react/forms/Forms";
+import Hooks from "./react/Hooks/Hooks";
+import LiftingStateUp from "./react/lifting-state-up/LiftingStateUp";
+import Other from "./other/Other";
 
 const routes = [
   {
     path: "javascript",
+    content: <JavaScript />,
     subroutes: [
-      { path: "prototypes", content: Prototypes },
-      { path: "higher-order-functions", content: HigherOrderFunctions },
-      { path: "packages", content: Packages },
-      { path: "callback", content: Callback },
-      { path: "async", content: Async },
-      { path: "event-bubbling", content: EventBubbling },
-      { path: "promises", content: Promises },
-      { path: "storage", content: Storage },
-      { path: "variable-scope", content: VariableScope },
-      { path: "window-object", content: WindowObject },
+      { path: "prototypes", content: <Prototypes /> },
+      { path: "higher-order-functions", content: <HigherOrderFunctions /> },
+      { path: "packages", content: <Packages /> },
+      { path: "callback", content: <Callback /> },
+      { path: "async", content: <Async /> },
+      { path: "event-bubbling", content: <EventBubbling /> },
+      { path: "promises", content: <Promises /> },
+      { path: "storage", content: <Storage /> },
+      { path: "variable-scope", content: <VariableScope /> },
+      { path: "window-object", content: <WindowObject /> },
     ],
   },
   {
     path: "react",
+    content: <React />,
     subroutes: [
-      { path: "component-basic", content: React },
-      { path: "jsx", content: React },
-      { path: "props-state", content: React },
-      { path: "component-lifecycle", content: React },
-      { path: "event-handling", content: React },
-      { path: "conditional-rendering", content: React },
-      { path: "lists-keys", content: React },
-      { path: "forms", content: React },
-      { path: "hooks", content: React },
-      { path: "error-handling", content: React },
-      { path: "lifting-state-up", content: React },
+      { path: "component-basic", content: <ComponentBasic /> },
+      { path: "jsx", content: <JSXExample /> },
+      { path: "props-state", content: <PropState /> },
+      { path: "component-lifecycle", content: <ComponentLifeCycle /> },
+      { path: "event-handling", content: <EventHandling /> },
+      { path: "conditional-rendering", content: <ConditionalRendering /> },
+      { path: "lists-keys", content: <ListsKeys /> },
+      { path: "forms", content: <Forms /> },
+      { path: "hooks", content: <Hooks /> },
+      { path: "error-handling", content: <React /> }, // TODO: Not implemented yet
+      { path: "lifting-state-up", content: <LiftingStateUp /> },
     ],
   },
   {
     path: "other",
+    content: <Other />,
     subroutes: [
-      {
-        path: "router",
-        subroutes: [
-          { path: "basics", content: React },
-          { path: "navigation", content: React },
-          { path: "sub-routes", content: React },
-        ],
-      },
-      {
-        path: "security",
-        subroutes: [
-          { path: "jwt", content: React },
-          { path: "cors", content: React },
-        ],
-      },
-      {
-        path: "styling",
-        subroutes: [
-          { path: "flexbox-grid", content: React },
-          { path: "media-queries", content: React },
-          { path: "design-principles", content: React },
-        ],
-      },
-      {
-        path: "deployment",
-        subroutes: [
-          { path: "docker", content: React },
-          { path: "domain", content: React },
-          { path: "https", content: React },
-        ],
-      },
+      { path: "router/basics", content: <React /> },
+      { path: "router/navigation", content: <React /> },
+      { path: "router/sub-routes", content: <React /> },
+      { path: "security/jwt", content: <React /> },
+      { path: "security/cors", content: <React /> },
+      { path: "styling/flexbox-grid", content: <React /> },
+      { path: "styling/media-queries", content: <React /> },
+      { path: "styling/design-principles", content: <React /> },
+      { path: "deployment/docker", content: <React /> }, // TODO: Måske kun 1 til deployment?
+      { path: "deployment/domain", content: <React /> },
+      { path: "deployment/https", content: <React /> },
     ],
   },
 ];
@@ -89,107 +85,18 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<h1>Home</h1>} />
-          <Route path="/javascript" element={<JavaScript />}>
-            <Route path="prototypes" element={<Prototypes />} />
-            <Route
-              path="higher-order-functions"
-              element={<HigherOrderFunctions />}
-            />
-            <Route path="packages" element={<Packages />} />
-            <Route path="callback" element={<Callback />} />
-            <Route path="async" element={<Async />} />
-            <Route path="event-bubbling" element={<EventBubbling />} />
-            <Route path="promises" element={<Promises />} />
-            <Route path="storage" element={<Storage />} />
-            <Route path="variable-scope" element={<VariableScope />} />
-            <Route path="window-object" element={<WindowObject />} />
-          </Route>
-          <Route path="/react" element={<React />}>
-            <Route path="component-basic" element={<h1>Component Basic</h1>} />
-            <Route path="jsx" element={<h1>JSX</h1>} />
-            <Route path="props-state" element={<h1>Props State</h1>} />
-            <Route
-              path="component-lifecycle"
-              element={<h1>Component Lifecycle</h1>}
-            />
-            <Route path="event-handling" element={<h1>Event Handling</h1>} />
-            <Route
-              path="conditional-rendering"
-              element={<h1>Conditional Rendering</h1>}
-            />
-            <Route path="lists-keys" element={<h1>Lists Keys</h1>} />
-            <Route path="forms" element={<h1>Forms</h1>} />
-            <Route path="hooks" element={<h1>Hooks</h1>} />
-            <Route path="error-handling" element={<h1>Error Handling</h1>} />
-            <Route
-              path="lifting-state-up"
-              element={<h1>Lifting State Up</h1>}
-            />
-          </Route>
-          <Route
-            path="/other"
-            element={
-              <div>
-                <h1>Other</h1>
-                <Outlet />
-              </div>
-            }
-          >
-            <Route
-              path="router"
-              element={
-                <div>
-                  <h1>Router</h1>
-                  <Outlet />
-                </div>
-              }
-            >
-              <Route path="basics" element={<h1>Basics</h1>} />
-              <Route path="navigation" element={<h1>Navigation</h1>} />
-              <Route path="sub-routes" element={<h1>Sub Routes</h1>} />
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.content}>
+              {route.subroutes.map((subroute, index) => (
+                <Route
+                  key={index}
+                  path={subroute.path}
+                  element={subroute.content}
+                />
+              ))}
             </Route>
-            <Route
-              path="security"
-              element={
-                <div>
-                  <h1>Security</h1>
-                  <Outlet />
-                </div>
-              }
-            >
-              <Route path="jwt" element={<h1>JWT</h1>} />
-              <Route path="cors" element={<h1>CORS</h1>} />
-            </Route>
-            <Route
-              path="styling"
-              element={
-                <div>
-                  <h1>Styling</h1>
-                  <Outlet />
-                </div>
-              }
-            >
-              <Route path="flexbox-grid" element={<h1>Flexbox Grid</h1>} />
-              <Route path="media-queries" element={<h1>Media Queries</h1>} />
-              <Route
-                path="design-principles"
-                element={<h1>Design Principles</h1>}
-              />
-            </Route>
-            <Route
-              path="deployment"
-              element={
-                <div>
-                  <h1>Deployment</h1>
-                  <Outlet />
-                </div>
-              }
-            >
-              <Route path="docker" element={<h1>Docker</h1>} />
-              <Route path="domain" element={<h1>Domain</h1>} />
-              <Route path="https" element={<h1>HTTPS</h1>} />
-            </Route>
-          </Route>
+          ))}
+          <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
     </div>
