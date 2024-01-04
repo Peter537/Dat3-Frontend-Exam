@@ -1,33 +1,40 @@
 /* eslint-disable no-unused-vars */
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import "./App.css";
-import Prototypes from "./javascript/prototypes/Prototypes";
-import JavaScript from "./javascript/JavaScript";
-import HigherOrderFunctions from "./javascript/higher-order-functions/HigherOrderFunctions";
-import Packages from "./javascript/packages/Packages";
-import Callback from "./javascript/callback/Callback";
-import Async from "./javascript/async/Async";
-import EventBubbling from "./javascript/event-bubbling/EventBubbling";
-import Promises from "./javascript/promises/Promises";
-import Storage from "./javascript/storage/Storage";
-import VariableScope from "./javascript/variable-scope/VariableScope";
-import WindowObject from "./javascript/window-object/WindowObject";
-import React from "./react/React";
+import Prototypes from "./pages/javascript/prototypes/Prototypes";
+import JavaScript from "./pages/javascript/JavaScript";
+import HigherOrderFunctions from "./pages/javascript/higher-order-functions/HigherOrderFunctions";
+import Packages from "./pages/javascript/packages/Packages";
+import Callback from "./pages/javascript/callback/Callback";
+import Async from "./pages/javascript/async/Async";
+import EventBubbling from "./pages/javascript/event-bubbling/EventBubbling";
+import Promises from "./pages/javascript/promises/Promises";
+import Storage from "./pages/javascript/storage/Storage";
+import VariableScope from "./pages/javascript/variable-scope/VariableScope";
+import WindowObject from "./pages/javascript/window-object/WindowObject";
+import React from "./pages/react/React";
 import CodeExecutor from "./CodeExecutor";
-import ComponentBasic from "./react/component-basic/ComponentBasic";
-import JSXExample from "./react/jsx/JSXExample";
-import PropState from "./react/props-state/PropsState";
-import ComponentLifeCycle from "./react/component-lifecycle/ComponentLifecycle";
-import EventHandling from "./react/event-handling/EventHandling";
-import ConditionalRendering from "./react/conditional-rendering/ConditionalRendering";
-import ListsKeys from "./react/lists-keys/ListsKeys";
-import Forms from "./react/forms/Forms";
-import Hooks from "./react/Hooks/Hooks";
-import LiftingStateUp from "./react/lifting-state-up/LiftingStateUp";
-import Other from "./other/Other";
+import ComponentBasic from "./pages/react/component-basic/ComponentBasic";
+import JSXExample from "./pages/react/jsx/JSXExample";
+import PropState from "./pages/react/props-state/PropsState";
+import ComponentLifeCycle from "./pages/react/component-lifecycle/ComponentLifecycle";
+import EventHandling from "./pages/react/event-handling/EventHandling";
+import ConditionalRendering from "./pages/react/conditional-rendering/ConditionalRendering";
+import ListsKeys from "./pages/react/lists-keys/ListsKeys";
+import Forms from "./pages/react/forms/Forms";
+import LiftingStateUp from "./pages/react/lifting-state-up/LiftingStateUp";
+import Other from "./pages/other/Other";
+import Header from "./Header";
+import Hooks from "./pages/react/hooks/Hooks";
 
 const routes = [
   {
+    name: "Home",
+    path: "",
+    content: <h1>Home</h1>,
+  },
+  {
+    name: "JavaScript",
     path: "javascript",
     content: <JavaScript />,
     subroutes: [
@@ -44,6 +51,7 @@ const routes = [
     ],
   },
   {
+    name: "React",
     path: "react",
     content: <React />,
     subroutes: [
@@ -61,6 +69,7 @@ const routes = [
     ],
   },
   {
+    name: "Other",
     path: "other",
     content: <Other />,
     subroutes: [
@@ -81,13 +90,16 @@ const routes = [
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <BrowserRouter>
+        <header>
+          <Header routes={routes} />
+        </header>
         <Routes>
           <Route path="/" element={<h1>Home</h1>} />
           {routes.map((route, index) => (
             <Route key={index} path={route.path} element={route.content}>
-              {route.subroutes.map((subroute, index) => (
+              {route.subroutes?.map((subroute, index) => (
                 <Route
                   key={index}
                   path={subroute.path}
@@ -96,6 +108,7 @@ function App() {
               ))}
             </Route>
           ))}
+          <Route path="code-executor" element={<CodeExecutor />} />
           <Route path="*" element={<h1>Page Not Found</h1>} />
         </Routes>
       </BrowserRouter>
