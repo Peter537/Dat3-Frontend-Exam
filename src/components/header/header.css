@@ -1,0 +1,16 @@
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.5em;
+}
+
+.header-element {
+  display: flex;
+}
+
+.header-divider {
+  margin: 0 1.1rem;
+  color: black;
+}
