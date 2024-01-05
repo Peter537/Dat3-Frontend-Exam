@@ -35,7 +35,6 @@ export const routes = [
   {
     name: "Home",
     path: "/",
-    content: <h1>Home</h1>,
   },
   {
     name: "JavaScript",
