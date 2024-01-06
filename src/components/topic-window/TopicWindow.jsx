@@ -10,8 +10,16 @@ function TopicWindow({ topic, pathname }) {
   const [showTopWindow, setShowTopWindow] = useState(true);
 
   useEffect(() => {
-    let filteredRoutes = allRoutes.filter((route) => route.name == topic);
-    setRoutes(filteredRoutes);
+    if (topic == "Home") {
+      return setRoutes([]);
+    }
+
+    let routes = allRoutes
+      .filter((route) => route.name == topic)
+      .map((route) => route.subroutes)
+      .flat()
+      .sort((a, b) => a.name.localeCompare(b.name));
+    setRoutes(routes);
   }, [topic]);
 
   useEffect(() => {
@@ -25,11 +33,7 @@ function TopicWindow({ topic, pathname }) {
           <h1>{topic}</h1>
           {routes?.map((route, index) => (
             <div key={index}>
-              {route.subroutes?.map((subroute, index) => (
-                <div key={index}>
-                  <Link to={subroute.path}>{subroute.name}</Link>
-                </div>
-              ))}
+              <Link to={route.path}>{route.name}</Link>
             </div>
           ))}
         </div>
