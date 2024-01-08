@@ -1,5 +1,9 @@
-.topic-window {
+.questions-window {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.question-element {
+  font-size: 1.5rem;
 }

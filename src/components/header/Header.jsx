@@ -2,19 +2,16 @@
 import { Link } from "react-router-dom";
 import "./header.css";
 
-function Header({ routes }) {
+function Header() {
   return (
     <nav className="header-row">
-      {routes.map((route, index) => (
-        <div className="header-element" key={index}>
-          <div>
-            <Link to={route.path}>{route.name}</Link>
-          </div>
-          {routes.length - 1 !== index && (
-            <div className="header-divider">|</div>
-          )}
-        </div>
-      ))}
+      <div className="header-element">
+        <Link to="/">Home</Link>
+      </div>
+      <div className="header-divider">|</div>
+      <div className="header-element">
+        <Link to="/question">Questions</Link>
+      </div>
     </nav>
   );
 }
