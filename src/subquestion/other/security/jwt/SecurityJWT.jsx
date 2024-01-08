@@ -1,7 +1,7 @@
 function SecurityJWT() {
   return (
     <div>
-      <h1>JWT</h1>
+      <h2>Security - JWT</h2>
     </div>
   );
 }

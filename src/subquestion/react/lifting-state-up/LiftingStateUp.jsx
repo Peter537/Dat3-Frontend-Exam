@@ -11,6 +11,7 @@ function LiftingStateUp() {
 
   return (
     <div>
+      <h2>React - Lifting State Up</h2>
       <ToggleButton onToggle={toggleState} />
       <DisplayState isOn={isOn} />
     </div>

@@ -12,9 +12,9 @@ function PropState() {
 
   return (
     <div>
+      <h2>React - Props and State</h2>
       <SubComponent message="Hello from props!" />
-
-      <h2>Count: {count}</h2>
+      <div>Count: {count}</div>
       <button onClick={incrementCount}>Increment</button>
     </div>
   );

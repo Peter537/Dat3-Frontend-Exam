@@ -1,7 +1,7 @@
 function ResponsiveDesign() {
   return (
     <div>
-      <h1>Responsive Design</h1>
+      <h2>Styling - Responsive Design</h2>
     </div>
   );
 }

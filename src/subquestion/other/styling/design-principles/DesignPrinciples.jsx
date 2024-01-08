@@ -1,7 +1,7 @@
 function DesignPrinciples() {
   return (
     <div>
-      <h1>Design Principles</h1>
+      <h2>Styling - Design Principles</h2>
     </div>
   );
 }

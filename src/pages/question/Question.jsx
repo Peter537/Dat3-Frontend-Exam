@@ -1,13 +1,15 @@
 /* eslint-disable react/prop-types */
+import "./question.css";
+
 function Question({ number, javascript, react, other }) {
   return (
-    <div>
+    <div className="question-window">
       <h1>Question {number}</h1>
-      <h2>Javascript</h2>
+      <div className="dividing-line"></div>
       {javascript}
-      <h2>React</h2>
+      <div className="dividing-line"></div>
       {react}
-      <h2>Other</h2>
+      <div className="dividing-line"></div>
       {other}
     </div>
   );

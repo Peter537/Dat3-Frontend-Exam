@@ -14,7 +14,7 @@ function VariableScope() {
 
   return (
     <div>
-      <h1>Variable Scope</h1>
+      <h2>JavaScript - Variable Scope</h2>
       <button onClick={localVariable}>Log Local Variable</button>
       <button onClick={accessGlobalVariable}>Log Global Variable</button>
     </div>

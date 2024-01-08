@@ -1,7 +1,7 @@
 function ErrorHandling() {
   return (
     <div>
-      <h1>Error Handling</h1>
+      <h2>React - Error Handling</h2>
     </div>
   );
 }

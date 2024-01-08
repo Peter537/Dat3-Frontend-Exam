@@ -4,9 +4,10 @@ import UncontrolledFormExample from "./UncontrolledFormExample";
 function Forms() {
   return (
     <div>
-      <h2>Controlled Form</h2>
+      <h2>React - Uncontrolled Forms & Controlled Forms</h2>
+      <h3>Controlled Form</h3>
       <ControlledFormExample />
-      <h2>Uncontrolled Form</h2>
+      <h3>Uncontrolled Form</h3>
       <UncontrolledFormExample />
     </div>
   );

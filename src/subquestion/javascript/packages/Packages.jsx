@@ -1,7 +1,7 @@
 function Packages() {
   return (
     <div>
-      <h1>Packages</h1>
+      <h2>JavaScript - Packages</h2>
       <h3>package.json</h3>
       <p>
         Denne fil indeholder noget information omkring projektet, og de

@@ -1,7 +1,7 @@
 function RouterBasics() {
   return (
     <div>
-      <h1>RouterBasics</h1>
+      <h2>Router - Basics</h2>
     </div>
   );
 }

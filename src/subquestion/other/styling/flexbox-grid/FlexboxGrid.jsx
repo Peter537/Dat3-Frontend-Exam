@@ -1,7 +1,7 @@
 function FlexboxGrid() {
   return (
     <div>
-      <h1>FlexboxGrid</h1>
+      <h2>Styling - Flexbox Grid</h2>
     </div>
   );
 }

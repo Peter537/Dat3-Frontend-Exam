@@ -14,15 +14,18 @@ function EventHandling() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleInputChange}
-        placeholder="Type something..."
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div>
+      <h2>React - Event Handling</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder="Type something..."
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   );
 }
 

@@ -34,7 +34,7 @@ function Storage() {
 
   return (
     <div>
-      <h1>Storage</h1>
+      <h2>JavaScript - Storage</h2>
       <h3>Local Storage</h3>
       <p>
         local storage er gemt på computeren, kan bruges over flere sessioner

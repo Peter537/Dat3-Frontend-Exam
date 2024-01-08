@@ -16,7 +16,8 @@ function JSXExample() {
 
   return (
     <div>
-      <h1>Count: {count}</h1>
+      <h2>React - JSX Example</h2>
+      <div>Count: {count}</div>
       <button onClick={handleButtonClick}>Click me</button>
     </div>
   );

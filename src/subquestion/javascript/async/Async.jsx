@@ -23,7 +23,7 @@ function Async() {
 
   return (
     <div>
-      <h1>Async</h1>
+      <h2>JavaScript - Async</h2>
       <p>{country}</p>
     </div>
   );

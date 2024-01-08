@@ -1,7 +1,7 @@
 function SpreadOperator() {
   return (
     <div>
-      <h1>Spread Operator</h1>
+      <h2>JavaScript - Spread Operator</h2>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 function SecurityCORS() {
   return (
     <div>
-      <h1>CORS</h1>
+      <h2>Security - CORS</h2>
     </div>
   );
 }

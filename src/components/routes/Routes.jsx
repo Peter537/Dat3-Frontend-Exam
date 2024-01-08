@@ -26,7 +26,6 @@ import Docker from "../../subquestion/other/deployment/docker/Docker";
 import Https from "../../subquestion/other/deployment/https/Https";
 import SecurityCORS from "../../subquestion/other/security/cors/SecurityCORS";
 import SecurityJWT from "../../subquestion/other/security/jwt/SecurityJWT";
-import UseEffectExample from "../../subquestion/react/hooks/UseEffectExample";
 import SpreadOperator from "../../subquestion/javascript/spread-operator/SpreadOperator";
 import ResponsiveDesign from "../../subquestion/other/styling/responsive-design/ResponsiveDesign";
 
@@ -64,7 +63,7 @@ export const questions = [
   {
     number: "6",
     javascript: <Storage />,
-    react: <UseEffectExample />,
+    react: <Hooks />,
     other: <RouterNavigation />,
   },
   {

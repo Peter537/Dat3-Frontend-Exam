@@ -5,6 +5,7 @@ function ConditionalRendering() {
 
   return (
     <div>
+      <h2>React - Conditional Rendering</h2>
       <button onClick={() => setIsOn(!isOn)}>
         {isOn ? "Turn Off" : "Turn On"}
       </button>

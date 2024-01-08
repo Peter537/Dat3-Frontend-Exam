@@ -23,7 +23,7 @@ function Promises() {
 
   return (
     <div>
-      <h1>Promises</h1>
+      <h2>JavaScript - Promises</h2>
       <p>{result}</p>
     </div>
   );

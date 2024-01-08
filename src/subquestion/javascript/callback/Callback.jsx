@@ -1,5 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 function Callback() {
+  /*
+   * A callback function is a function passed into another function as an argument
+   */
   function hello(name, callback) {
     console.log(`Hello ${name}`);
     setTimeout(() => {
@@ -13,7 +16,7 @@ function Callback() {
 
   return (
     <div>
-      <h1>Callback</h1>
+      <h2>JavaScript - Callback</h2>
       <p>hello("Peter", goodbye): {hello("Peter", goodbye)}</p>
     </div>
   );

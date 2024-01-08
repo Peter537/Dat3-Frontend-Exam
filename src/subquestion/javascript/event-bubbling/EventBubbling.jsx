@@ -9,7 +9,7 @@ function EventBubbling() {
 
   return (
     <div>
-      <h1>Event Bubbling</h1>
+      <h2>JavaScript - Event Bubbling</h2>
       <button onClick={handleClick}>Click me</button>
       <div>Count: {count}</div>
     </div>
