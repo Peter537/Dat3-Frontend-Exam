@@ -28,6 +28,7 @@ import SecurityCORS from "../../subquestion/other/security/cors/SecurityCORS";
 import SecurityJWT from "../../subquestion/other/security/jwt/SecurityJWT";
 import SpreadOperator from "../../subquestion/javascript/spread-operator/SpreadOperator";
 import ResponsiveDesign from "../../subquestion/other/styling/responsive-design/ResponsiveDesign";
+import UseEffect from "../../subquestion/react/use-effect/UseEffect";
 
 export const questions = [
   {
@@ -63,7 +64,7 @@ export const questions = [
   {
     number: "6",
     javascript: <Storage />,
-    react: <Hooks />,
+    react: <UseEffect />,
     other: <RouterNavigation />,
   },
   {
