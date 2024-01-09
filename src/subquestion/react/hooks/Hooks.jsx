@@ -9,6 +9,7 @@ function Hooks() {
       <UseStateExample />
       <h3>useEffect</h3>
       <UseEffectExample />
+      <h3>Error Handling</h3>
     </div>
   );
 }

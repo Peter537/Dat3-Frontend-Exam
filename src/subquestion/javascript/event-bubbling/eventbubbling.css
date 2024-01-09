@@ -1,0 +1,16 @@
+.eventbubbling-div {
+  padding: 20px;
+  background-color: green;
+  width: max-content;
+}
+
+.eventbubbling-span {
+  display: block;
+  padding: 20px;
+  background-color: red;
+}
+
+.eventbubbling-img {
+  resize: both;
+  width: 600px;
+}

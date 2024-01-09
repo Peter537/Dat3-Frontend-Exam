@@ -15,7 +15,7 @@ function ComponentBasic() {
 
   return (
     <div>
-      <h2>React - Todo List</h2>
+      <h2>React - Components Basics</h2>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
     </div>
   );

@@ -1,5 +1,7 @@
+import { useState } from "react";
+
 function ListsKeys() {
-  const items = ["Apple", "Banana", "Orange"];
+  const [items, setItems] = useState(["Apple", "Banana", "Orange"]);
 
   return (
     <div>
@@ -10,6 +12,9 @@ function ListsKeys() {
           <div key={index}>{item}</div>
         ))}
       </div>
+      <button onClick={() => setItems([...items, "Pineapple"])}>
+        Add Pineapple
+      </button>
     </div>
   );
 }

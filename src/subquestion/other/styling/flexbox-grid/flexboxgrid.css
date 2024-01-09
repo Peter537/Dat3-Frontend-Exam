@@ -1,0 +1,23 @@
+.flexbox-grid-container {
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  color: black;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.flexbox-grid-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flexbox-grid-item {
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  text-align: center;
+  background-color: #f1f1f1;
+}
