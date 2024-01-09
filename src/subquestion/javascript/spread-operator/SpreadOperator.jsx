@@ -1,31 +1,33 @@
-import { useState } from "react";
-
 function SpreadOperator() {
-  const [age, setAge] = useState(20);
-  const [person, setPerson] = useState({ name: "Peter", age: 20 });
-  const array1 = [1, 2, 3];
-  const array2 = [...array1, 4, 5, 6];
+  const arr1 = [1, 2, 3];
+  const arr2 = [4, 5, 6];
+  const combinedArray = [...arr1, ...arr2]; // Combining arrays using spread operator
 
-  person.toString = function () {
-    return `${this.name} is ${this.age} years old`;
-  };
+  const originalArray = [1, 2, 3];
+  const copiedArray = [...originalArray]; // Creating a copy of the array
 
-  function handleClick() {
-    setPerson({ ...person, age: age });
+  function sum(...numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0); // Using rest parameter to collect all arguments into an array
   }
+
+  const [first, second, ...rest] = [1, 2, 3, 4, 5];
 
   return (
     <div>
       <h2>JavaScript - Spread Operator</h2>
-      <p>array1: {array1}</p>
-      <p>array2: {array2}</p>
-      <p>person1: {person.toString()}</p>
-      <input
-        type="number"
-        placeholder="new age"
-        onChange={(event) => setAge(event.target.value)}
-      />
-      <button onClick={handleClick}>Set</button>
+      <h3>Array Concatenation</h3>
+      <p>arr1: {arr1}</p>
+      <p>arr2: {arr2}</p>
+      <p>combinedArray: {combinedArray}</p>
+      <h3>Copying Arrays</h3>
+      <p>originalArray: {originalArray}</p>
+      <p>copiedArray: {copiedArray}</p>
+      <h3>Rest Parameter</h3>
+      <p>sum(1, 2, 3): {sum(1, 2, 3)}</p>
+      <h3>Destructuring</h3>
+      <p>first: {first}</p>
+      <p>second: {second}</p>
+      <p>rest: {rest}</p>
     </div>
   );
 }
