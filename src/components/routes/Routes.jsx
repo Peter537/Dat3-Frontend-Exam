@@ -19,7 +19,7 @@ import Hooks from "../../subquestion/react/hooks/Hooks";
 import ErrorHandling from "../../subquestion/react/error-handling/ErrorHandling";
 import RouterBasics from "../../subquestion/other/router/basics/RouterBasics";
 import RouterNavigation from "../../subquestion/other/router/navigation/RouterNavigation";
-import RouterSubRoutes from "../../subquestion/other/router/subroutes/RouterSubroutes";
+import RouterSubRoutes from "../../subquestion/other/router/subroutes/RouterSubRoutes";
 import FlexboxGrid from "../../subquestion/other/styling/flexbox-grid/FlexboxGrid";
 import DesignPrinciples from "../../subquestion/other/styling/design-principles/DesignPrinciples";
 import Docker from "../../subquestion/other/deployment/docker/Docker";
