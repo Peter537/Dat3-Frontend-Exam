@@ -17,6 +17,8 @@ function FlexboxGrid() {
           <FlexboxGridItem number={8} />
           <FlexboxGridItem number={9} />
           <FlexboxGridItem number={10} />
+          <FlexboxGridItem number={11} />
+          <FlexboxGridItem number={12} />
         </div>
       </div>
     </div>

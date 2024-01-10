@@ -1,0 +1,75 @@
+.responsive-container {
+  min-width: 80vw;
+  min-height: 30vh;
+  background-color: white;
+}
+
+.responsive-text-1 {
+  font-size: 2em;
+  color: red;
+}
+
+.responsive-text-2 {
+  font-size: 1.8em;
+  color: blue;
+}
+
+.responsive-text-3 {
+  font-size: 1.6em;
+  color: green;
+}
+
+.responsive-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.responsive-block {
+  flex: 1 0 31%;
+  border: 1px solid black;
+  background-color: gray;
+  color: black;
+}
+
+@media screen and (max-width: 800px) {
+  .responsive-text-1 {
+    font-size: 1.5em;
+    color: red;
+  }
+
+  .responsive-text-2 {
+    font-size: 1.3em;
+    color: blue;
+  }
+
+  .responsive-text-3 {
+    font-size: 1.1em;
+    color: green;
+  }
+
+  .responsive-block {
+    flex: 1 0 46%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-text-1 {
+    font-size: 1.2em;
+    color: red;
+  }
+
+  .responsive-text-2 {
+    font-size: 1em;
+    color: blue;
+  }
+
+  .responsive-text-3 {
+    font-size: 0.8em;
+    color: green;
+  }
+
+  .responsive-block {
+    flex: 1 0 96%;
+  }
+}

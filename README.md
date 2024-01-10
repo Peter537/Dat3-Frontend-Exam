@@ -87,7 +87,11 @@ State er en måde at holde styr på data i en component. Når state ændres, så
 
 4. Describe conceptually how we deploy a React frontend application to a docker container on a virtual machine.
 
-Vi har en docker-compose fil på vores virtuelle maskine, så kan vi bare køre `docker-compose up` og så vil den bygge vores frontend hvis det er sat op rigtigt.
+Vi skal starte med at have vores React Applikation ind på DockerHub, vi plejer at gøre det gennem GitHub actions, så hver gang vi pusher til GitHub, så bygger den vores frontend og pusher den til DockerHub, der bruger vi .github/workflows/workflow.yml.
+
+Derefter skal vi ind på vores Virtuelle Maskine som kører via DigitalOcean, inde på vores VM skal vi have en `docker-compose.yml` fil, som vi bruger til at opsætte vor docker container, så den kan køre vores frontend.
+
+Og til sidst skal vi køre `docker-compose up` for at starte docker containeren.
 
 ## Question 4
 
@@ -167,6 +171,8 @@ Vi kan benytte os af ternary operator til at lave conditional rendering i React.
 
 4. Describe conceptually the typical flow of using JWTs for user authentication in a React application.
 
+Når en bruger logger ind, så gemmer vi tokenet i local storage, og så kan vi bruge det når vi skal hente data fra backend.
+
 ## Question 6
 
 ### JS
@@ -245,6 +251,10 @@ Map funktionen bruges til at lave en liste af elementer, som kan bruges i JSX.
 
 4. Describe conceptually what HTTPS is and how we got it working on our deployed websites.
 
+HTTPS (Hypertext Transfer Protocol Secure) er en sikker version af HTTP, som bruger TLS (Transport Layer Security) til at kryptere dataen mellem klienten og serveren.
+
+Den måde som vi bruger det på er gennem Traefik som håndterer vores HTTPS certifikater, og så bruger vi ACME (Automatic Certificate Management Environment) til at generere vores certifikater.
+
 ## Question 9
 
 ### JS
@@ -298,6 +308,10 @@ useEffect bruges til at håndtere side effekter i React.
 ### Security/Routing/Styling
 
 5. Describe conceptually what Same Origin Policy and CORS is, and how we avoid getting CORS errors when fetching data from an API.
+
+CORS (Cross-Origin Resource Sharing) er en mekanisme som tillader en web browser til at få adgang til ressourcer fra en anden origin end den origin som den blev serveret fra.
+
+Same Origin Policy er en browser security feature som forhindrer en web browser i at få adgang til ressourcer fra en anden origin.
 
 ## Question 11
 

@@ -15,9 +15,28 @@
 }
 
 .flexbox-grid-item {
+  flex: 1 0 21%;
   border: 1px solid black;
   margin: 1%;
   padding: 1%;
   text-align: center;
   background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 800px) {
+  .flexbox-grid-item {
+    flex: 1 0 31%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flexbox-grid-item {
+    flex: 1 0 46%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .flexbox-grid-item {
+    flex: 1 0 96%;
+  }
 }
