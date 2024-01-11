@@ -1,3 +1,5 @@
+import QuestionElement from "../../../components/question-element/QuestionElement";
+
 function VariableScope() {
   // Global variable
   let globalVariable = "global";
@@ -25,6 +27,11 @@ function VariableScope() {
   return (
     <div>
       <h2>JavaScript - Variable Scope</h2>
+      <QuestionElement
+        questions={[
+          "1. What is the scope of a variable in JavaScript? Explain the difference between global and local scope",
+        ]}
+      />
       <button onClick={accessLocalVariable}>Log Local Variable</button>
       <button onClick={accessGlobalVariable}>Log Global Variable</button>
     </div>

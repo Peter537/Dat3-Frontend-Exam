@@ -1,3 +1,4 @@
+import QuestionElement from "../../../../components/question-element/QuestionElement";
 import FlexboxGridItem from "./FlexboxGridItem";
 import "./flexboxgrid.css";
 
@@ -5,6 +6,11 @@ function FlexboxGrid() {
   return (
     <div>
       <h2>Styling - Flexbox Grid</h2>
+      <QuestionElement
+        questions={[
+          "4. Describe the purpose of flexbox and grid in css, and show some examples of what can be achieved by applying them",
+        ]}
+      />
       <div className="flexbox-grid-container">
         <div className="flexbox-grid-grid">
           <FlexboxGridItem number={1} />

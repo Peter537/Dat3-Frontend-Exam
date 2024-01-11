@@ -1,7 +1,15 @@
+import QuestionElement from "../../../../components/question-element/QuestionElement";
+
 function SecurityJWT() {
   return (
     <div>
       <h2>Security - JWT</h2>
+      <QuestionElement
+        questions={[
+          "4. Describe conceptually the typical flow of using JWTs for user authentication in a React application",
+          "4. Describe and show how we log in a user in React with JWT.",
+        ]}
+      />
       <a href="https://jwt.io/">jwt.io</a>
       <div>
         Eksempel token:

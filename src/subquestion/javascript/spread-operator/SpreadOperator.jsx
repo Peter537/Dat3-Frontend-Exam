@@ -1,3 +1,5 @@
+import QuestionElement from "../../../components/question-element/QuestionElement";
+
 function SpreadOperator() {
   const arr1 = [1, 2, 3];
   const arr2 = [4, 5, 6];
@@ -15,6 +17,11 @@ function SpreadOperator() {
   return (
     <div>
       <h2>JavaScript - Spread Operator</h2>
+      <QuestionElement
+        questions={[
+          "1. What is the spread operator in JavaScript and how does it differ from the rest operator?",
+        ]}
+      />
       <h3>Array Concatenation</h3>
       <p>arr1: {arr1}</p>
       <p>arr2: {arr2}</p>

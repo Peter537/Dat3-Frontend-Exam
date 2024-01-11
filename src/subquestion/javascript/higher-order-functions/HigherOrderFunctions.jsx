@@ -1,3 +1,5 @@
+import QuestionElement from "../../../components/question-element/QuestionElement";
+
 function HigherOrderFunctions() {
   /*
    * Has a function as an argument
@@ -32,6 +34,11 @@ function HigherOrderFunctions() {
   return (
     <div>
       <h2>JavaScript - Higher Order Functions</h2>
+      <QuestionElement
+        questions={[
+          "1. What are higher-order functions in JavaScript? Give an example.",
+        ]}
+      />
       <p>modifyValue(5, increment): {modifyValue(5, increment)}</p>
       <p>modifyValue(5, decrement): {modifyValue(5, decrement)}</p>
       <p>modifyValue(5, double): {modifyValue(5, double)}</p>

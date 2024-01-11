@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./eventbubbling.css";
 import eventBubbling from "./event-bubbling.png";
+import QuestionElement from "../../../components/question-element/QuestionElement";
 
 function EventBubbling() {
   const [count, setCount] = useState(0);
@@ -37,6 +38,9 @@ function EventBubbling() {
   return (
     <div>
       <h2>JavaScript - Event Bubbling</h2>
+      <QuestionElement
+        questions={["1. Explain the concept of event bubbling in JavaScript."]}
+      />
       <img className="eventbubbling-img" src={eventBubbling} />
       <div>
         Billede af:

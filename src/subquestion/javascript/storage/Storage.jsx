@@ -1,4 +1,5 @@
 import { useState } from "react";
+import QuestionElement from "../../../components/question-element/QuestionElement";
 
 function Storage() {
   const [sessionStorageName, setSessionStorageName] = useState("");
@@ -35,6 +36,11 @@ function Storage() {
   return (
     <div>
       <h2>JavaScript - Storage</h2>
+      <QuestionElement
+        questions={[
+          "1. What is the difference between localStorage and sessionStorage in JavaScript?",
+        ]}
+      />
       <h3>Local Storage</h3>
       <p>
         local storage er gemt på computeren, kan bruges over flere sessioner

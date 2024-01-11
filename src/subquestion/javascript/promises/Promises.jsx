@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
+import QuestionElement from "../../../components/question-element/QuestionElement";
 
 function Promises() {
   const [result, setResult] = useState("");
@@ -24,6 +25,11 @@ function Promises() {
   return (
     <div>
       <h2>JavaScript - Promises</h2>
+      <QuestionElement
+        questions={[
+          "1. Explain the concept of promises in JavaScript. How do they differ from callbacks?",
+        ]}
+      />
       <p>{result}</p>
     </div>
   );

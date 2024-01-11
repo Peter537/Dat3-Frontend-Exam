@@ -1,3 +1,5 @@
+import QuestionElement from "../../../components/question-element/QuestionElement";
+
 /* eslint-disable react/no-unescaped-entities */
 function Callback() {
   /*
@@ -17,6 +19,11 @@ function Callback() {
   return (
     <div>
       <h2>JavaScript - Callback</h2>
+      <QuestionElement
+        questions={[
+          "1. What is a callback function in JavaScript and when would you use one?",
+        ]}
+      />
       <p>hello("Peter", goodbye): {hello("Peter", goodbye)}</p>
     </div>
   );

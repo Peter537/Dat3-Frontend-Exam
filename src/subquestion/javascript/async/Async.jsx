@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
+import QuestionElement from "../../../components/question-element/QuestionElement";
 
 function Async() {
   const [country, setCountry] = useState(null);
@@ -24,6 +25,11 @@ function Async() {
   return (
     <div>
       <h2>JavaScript - Async</h2>
+      <QuestionElement
+        questions={[
+          "1. What is the difference between synchronous and asynchronous programming and how does async and await fit into this?",
+        ]}
+      />
       <p>{country}</p>
     </div>
   );

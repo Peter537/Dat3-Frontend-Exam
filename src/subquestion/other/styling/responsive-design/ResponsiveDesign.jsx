@@ -1,9 +1,13 @@
+import QuestionElement from "../../../../components/question-element/QuestionElement";
 import "./responsivedesign.css";
 
 function ResponsiveDesign() {
   return (
     <div>
       <h2>Styling - Responsive Design</h2>
+      <QuestionElement
+        questions={["4. Show a few examples of responsive design"]}
+      />
       <div className="responsive-container">
         <div className="responsive-text-1">Hello World</div>
         <div className="responsive-text-2">Hello World</div>
