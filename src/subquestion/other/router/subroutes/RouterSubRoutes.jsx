@@ -7,7 +7,7 @@ function RouterSubRoutes() {
       <QuestionElement
         questions={[
           "4. Explain how sub routing is working",
-          "5. Show an example of using sub routing with the element.",
+          "5. Show an example of using sub routing / nested routing with the <Outlet/> element.",
         ]}
       />
     </div>
