@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import CodeExecutor from "./components/code-executor/CodeExecutor";
 import Header from "./components/header/Header";
 import { questions } from "./components/routes/Routes";
 import Questions from "./pages/questions/Questions";
@@ -30,7 +29,6 @@ function App() {
             />
           ))}
         </Route>
-        <Route path="code-executor" element={<CodeExecutor />} />
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </BrowserRouter>

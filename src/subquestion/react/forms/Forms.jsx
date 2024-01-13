@@ -1,5 +1,6 @@
 import QuestionElement from "../../../components/question-element/QuestionElement";
 import ControlledFormExample from "./ControlledFormExample";
+import ErrorExample from "./ErrorExample";
 import UncontrolledFormExample from "./UncontrolledFormExample";
 
 function Forms() {
@@ -16,6 +17,8 @@ function Forms() {
       <ControlledFormExample />
       <h3>Uncontrolled Form</h3>
       <UncontrolledFormExample />
+      <h3>Handling Errors</h3>
+      <ErrorExample />
     </div>
   );
 }

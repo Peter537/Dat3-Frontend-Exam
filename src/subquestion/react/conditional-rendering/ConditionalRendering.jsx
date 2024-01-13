@@ -16,7 +16,20 @@ function ConditionalRendering() {
       <button onClick={() => setIsOn(!isOn)}>
         {isOn ? "Turn Off" : "Turn On"}
       </button>
+      {/* One liner */}
       {isOn ? <p>Text when ON</p> : <p>Text when OFF</p>}
+      {/* Multiple lines */}
+      {isOn ? (
+        <div>
+          <p>Multiple lines when ON</p>
+          <p>One extra Line</p>
+        </div>
+      ) : (
+        <div>
+          <p>Multiple lines when OFF</p>
+          <p>Here is another line</p>
+        </div>
+      )}
     </div>
   );
 }

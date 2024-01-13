@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoList from "./TodoList";
 import QuestionElement from "../../../components/question-element/QuestionElement";
 
@@ -7,6 +7,11 @@ function ComponentBasic() {
     { task: "Complete assignment", completed: false },
     { task: "Make React project", completed: true },
   ]);
+
+  useEffect(() => {
+    console.log("ComponentBasic - useEffect");
+    document.title = "React - Components Basics";
+  }, []);
 
   const toggleTodo = (index) => {
     const updatedTodos = [...todos];

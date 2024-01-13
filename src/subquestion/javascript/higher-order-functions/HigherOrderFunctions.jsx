@@ -31,6 +31,15 @@ function HigherOrderFunctions() {
 
   const multiplyByFive = multiplyBy(5);
 
+  /*
+   * Indbygget function (map)
+   */
+  const numbers = [1, 2, 3, 4, 5];
+
+  const squaredNumbers = numbers.map(function (number) {
+    return number * number;
+  });
+
   return (
     <div>
       <h2>JavaScript - Higher Order Functions</h2>
@@ -44,6 +53,7 @@ function HigherOrderFunctions() {
       <p>modifyValue(5, double): {modifyValue(5, double)}</p>
       <p>multiplyByFive(5): {multiplyByFive(5)}</p>
       <p>multiplyByFive(10): {multiplyByFive(10)}</p>
+      <p>squaredNumbers: {squaredNumbers.join(", ")}</p>
     </div>
   );
 }

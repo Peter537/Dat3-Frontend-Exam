@@ -1,17 +1,18 @@
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import variableScopeImg from "./variablescope.png";
 
 function VariableScope() {
   // Global variable
-  let globalVariable = "global";
+  const globalVariable = "global";
 
   function accessLocalVariable() {
     // Local variable
-    let localVariable = "local";
+    const localVariable = "local";
     console.log(localVariable);
 
     if (localVariable == "local") {
       // Block scope
-      let blockVariable = "block";
+      const blockVariable = "block";
       console.log(blockVariable);
     }
 
@@ -32,6 +33,9 @@ function VariableScope() {
           "1. What is the scope of a variable in JavaScript? Explain the difference between global and local scope",
         ]}
       />
+      <div>
+        <img className="variablescope-img" src={variableScopeImg} />
+      </div>
       <button onClick={accessLocalVariable}>Log Local Variable</button>
       <button onClick={accessGlobalVariable}>Log Global Variable</button>
     </div>

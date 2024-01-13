@@ -1,42 +1,48 @@
 .flexbox-grid-container {
-  max-width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  color: black;
-  padding-right: 10px;
-  padding-left: 10px;
+  /* Defines a container for the flexbox grid */
+  max-width: 80vw; /* Sets the maximum width of the container to 80% of the viewport width */
+  margin-left: auto; /* Centers the container horizontally */
+  margin-right: auto; /* Centers the container horizontally */
+  background-color: white; /* Sets the background color of the container to white */
+  color: black; /* Sets the text color of the container to black */
+  padding-right: 10px; /* Adds right padding to the container */
+  padding-left: 10px; /* Adds left padding to the container */
 }
 
 .flexbox-grid-grid {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  /* Defines a grid container for the flexbox items */
+  display: flex; /* Displays the grid container as a flex container */
+  flex-wrap: wrap; /* Allows the flex items to wrap to the next line */
+  flex-direction: row; /* Sets the direction of the flex items to horizontal */
 }
 
 .flexbox-grid-item {
-  flex: 1 0 21%;
-  border: 1px solid black;
-  margin: 1%;
-  padding: 1%;
-  text-align: center;
-  background-color: #f1f1f1;
+  /* Defines a flex item within the flexbox grid */
+  flex: 1 0 21%; /* Sets the flex-grow, flex-shrink, and flex-basis properties of the item */
+  border: 1px solid black; /* Adds a 1px solid black border to the item */
+  margin: 1%; /* Adds a 1% margin around the item */
+  padding: 1%; /* Adds a 1% padding inside the item */
+  text-align: center; /* Centers the text inside the item */
+  background-color: #f1f1f1; /* Sets the background color of the item to #f1f1f1 */
 }
 
 @media screen and (max-width: 800px) {
+  /* Media query for screens with a maximum width of 800px */
   .flexbox-grid-item {
-    flex: 1 0 31%;
+    flex: 1 0 31%; /* Modifies the flex-basis property of the item for smaller screens */
   }
 }
 
 @media screen and (max-width: 600px) {
+  /* Media query for screens with a maximum width of 600px */
   .flexbox-grid-item {
-    flex: 1 0 46%;
+    flex: 1 0 46%; /* Modifies the flex-basis property of the item for smaller screens */
   }
 }
 
 @media screen and (max-width: 500px) {
+  /* Media query for screens with a maximum width of 500px */
   .flexbox-grid-item {
-    flex: 1 0 96%;
+    flex: 1 0 96%; /* Modifies the flex-basis property of the item for smaller screens */
   }
 }

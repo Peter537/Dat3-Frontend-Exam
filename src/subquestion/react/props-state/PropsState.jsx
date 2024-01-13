@@ -21,6 +21,7 @@ function PropState() {
         ]}
       />
       <SubComponent message="Hello from props!" />
+      <SubComponent message="Hello again from props!" />
       <div>Count: {count}</div>
       <button onClick={incrementCount}>Increment</button>
     </div>

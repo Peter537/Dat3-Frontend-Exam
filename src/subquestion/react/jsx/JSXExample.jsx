@@ -1,14 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import QuestionElement from "../../../components/question-element/QuestionElement";
 
 function JSXExample() {
   // Using useState to manage state
   const [count, setCount] = useState(0);
-
-  // Using useEffect to perform side effects
-  useEffect(() => {
-    document.title = `Clicked ${count} times`;
-  }, [count]);
 
   // Handling onClick event
   const handleButtonClick = () => {
