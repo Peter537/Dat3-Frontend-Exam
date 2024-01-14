@@ -1,3 +1,4 @@
+import KeyPoints from "../../../../components/key-points/KeyPoints";
 import QuestionElement from "../../../../components/question-element/QuestionElement";
 import FlexboxGridItem from "./FlexboxGridItem";
 import "./flexboxgrid.css";
@@ -11,6 +12,7 @@ function FlexboxGrid() {
           "4. Describe the purpose of flexbox and grid in css, and show some examples of what can be achieved by applying them",
         ]}
       />
+      <KeyPoints keypoints={["Responsivt layout", "Flexbox: 1D, Grid: 2D"]} />
       <div className="flexbox-grid-container">
         <div className="flexbox-grid-grid">
           <FlexboxGridItem number={1} />

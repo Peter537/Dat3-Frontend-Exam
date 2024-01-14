@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import Examples from "../../../components/examples/Examples";
 
 function UseEffect() {
   const [value, setValue] = useState(0);
@@ -31,6 +32,20 @@ function UseEffect() {
       <div>Value2: {value2}</div>
       <button onClick={() => setValue(value + 1)}>Increment</button>
       <button onClick={() => setValue2(value2 + 1)}>Increment2</button>
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/components/MyProfile/EditProfile.jsx#L11",
+          },
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/pages/CharactersPage/CharactersPage.jsx#L12",
+          },
+        ]}
+      />
     </div>
   );
 }

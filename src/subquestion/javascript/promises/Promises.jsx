@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import KeyPoints from "../../../components/key-points/KeyPoints";
 
 function Promises() {
   const [result, setResult] = useState("");
@@ -28,6 +29,13 @@ function Promises() {
       <QuestionElement
         questions={[
           "1. Explain the concept of promises in JavaScript. How do they differ from callbacks?",
+        ]}
+      />
+      <KeyPoints
+        keypoints={[
+          "Promise objekt: pending/fulfilled/rejected",
+          "Chaines: .then() .catch()",
+          "Errorhandling: .catch()",
         ]}
       />
       <p>{result}</p>

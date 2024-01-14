@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import QuestionElement from "../../../../components/question-element/QuestionElement";
+import KeyPoints from "../../../../components/key-points/KeyPoints";
+import Examples from "../../../../components/examples/Examples";
 
 function RouterNavigation() {
   return (
@@ -10,6 +12,23 @@ function RouterNavigation() {
         questions={[
           "4. Explain how navigation works in React, and the difference from how it's done in a multipage application.",
           "5. Show an example of how navigation can be implemented in React",
+        ]}
+      />
+      <KeyPoints
+        keypoints={[
+          "React er SPA, så navigation involverer ikke fuldt page reload",
+          "Komponenter skifter dynamisk når navigation ændres",
+          "Langsommere inital load pga. større filer hentes, derefter hurtigere",
+          "React Router lytter på URL og skifter komponenter",
+        ]}
+      />
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/components/Header/Header.jsx#L18",
+          },
         ]}
       />
     </div>

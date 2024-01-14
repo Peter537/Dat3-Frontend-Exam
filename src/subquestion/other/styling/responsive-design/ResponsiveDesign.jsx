@@ -1,3 +1,4 @@
+import KeyPoints from "../../../../components/key-points/KeyPoints";
 import QuestionElement from "../../../../components/question-element/QuestionElement";
 import "./responsivedesign.css";
 
@@ -8,6 +9,7 @@ function ResponsiveDesign() {
       <QuestionElement
         questions={["4. Show a few examples of responsive design"]}
       />
+      <KeyPoints keypoints={["Media Queries", "Flexbox og Grid"]} />
       <div className="responsive-container">
         <div className="responsive-text-1">Hello World</div>
         <div className="responsive-text-2">Hello World</div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import Examples from "../../../components/examples/Examples";
 
 function ConditionalRendering() {
   const [isOn, setIsOn] = useState(false);
@@ -30,6 +31,15 @@ function ConditionalRendering() {
           <p>Here is another line</p>
         </div>
       )}
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/components/Header/Header.jsx#L34",
+          },
+        ]}
+      />
     </div>
   );
 }

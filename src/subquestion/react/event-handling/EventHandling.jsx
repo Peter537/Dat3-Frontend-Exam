@@ -1,5 +1,7 @@
 import { useState } from "react";
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import KeyPoints from "../../../components/key-points/KeyPoints";
+import Examples from "../../../components/examples/Examples";
 
 function EventHandling() {
   const [inputValue, setInputValue] = useState("");
@@ -23,6 +25,12 @@ function EventHandling() {
           "3. Show examples of how to handle form submit events, and how to handle input change events.",
         ]}
       />
+      <KeyPoints
+        keypoints={[
+          "Syntetiske events: forskellige browsers giver forskellig respons på samme event, React oversætter til samme respons hver gang",
+          "Declarative approach: vi forklarer hvad vi vil have sker, React tager sig af at binde det til DOM'en",
+        ]}
+      />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -32,6 +40,15 @@ function EventHandling() {
         />
         <button type="submit">Submit</button>
       </form>
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/components/MyProfile/EditProfile.jsx#L38",
+          },
+        ]}
+      />
     </div>
   );
 }

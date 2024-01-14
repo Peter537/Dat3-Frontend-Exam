@@ -1,4 +1,6 @@
+import KeyPoints from "../../../components/key-points/KeyPoints";
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import ErrorExample from "./ErrorExample";
 import UseEffectExample from "./UseEffectExample";
 import UseStateExample from "./UseStateExample";
 
@@ -13,11 +15,17 @@ function Hooks() {
           "4. Show example of how you handle errors in React.",
         ]}
       />
+      <KeyPoints
+        keypoints={[
+          "Error handling: try-catch, if-else (ternary), promise.catch(), ErrorBoundary",
+        ]}
+      />
       <h3>useState</h3>
       <UseStateExample />
       <h3>useEffect</h3>
       <UseEffectExample />
       <h3>Error Handling</h3>
+      <ErrorExample />
     </div>
   );
 }

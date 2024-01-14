@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import QuestionElement from "../../../../components/question-element/QuestionElement";
+import KeyPoints from "../../../../components/key-points/KeyPoints";
+import Examples from "../../../../components/examples/Examples";
 
 function RouterBasics() {
   return (
@@ -10,6 +12,21 @@ function RouterBasics() {
         questions={[
           "4. Explain what React Router is and its purpose in a React application.",
           "5. Show an example of how routing works in React",
+        ]}
+      />
+      <KeyPoints
+        keypoints={[
+          "React (SPA) har ingen indbygget Router",
+          "Ligner en MPA, men uden request til server hver gang",
+        ]}
+      />
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/App.jsx#L77",
+          },
         ]}
       />
     </div>

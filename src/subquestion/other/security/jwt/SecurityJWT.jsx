@@ -1,3 +1,5 @@
+import Examples from "../../../../components/examples/Examples";
+import KeyPoints from "../../../../components/key-points/KeyPoints";
 import QuestionElement from "../../../../components/question-element/QuestionElement";
 
 function SecurityJWT() {
@@ -10,6 +12,14 @@ function SecurityJWT() {
           "4. Describe and show how we log in a user in React with JWT.",
         ]}
       />
+      <KeyPoints
+        keypoints={[
+          "Brugeren logger ind på siden",
+          "Vi gemmer token i storage",
+          "Vi bruger token fra Storage til API requests",
+          "Vores server verificerer token inden den giver respons",
+        ]}
+      />
       <a href="https://jwt.io/">jwt.io</a>
       <div>
         Eksempel token:
@@ -19,6 +29,25 @@ function SecurityJWT() {
           </code>
         </div>
       </div>
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/pages/Login/Login.jsx#L21",
+          },
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/util/api.mjs#L11",
+          },
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/util/api.mjs#L53",
+          },
+        ]}
+      />
     </div>
   );
 }

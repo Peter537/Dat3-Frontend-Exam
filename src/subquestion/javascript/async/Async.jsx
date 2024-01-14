@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import Examples from "../../../components/examples/Examples";
 
 function Async() {
   const [country, setCountry] = useState(null);
@@ -31,6 +32,15 @@ function Async() {
         ]}
       />
       <p>{country}</p>
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing",
+          },
+        ]}
+      />
     </div>
   );
 }

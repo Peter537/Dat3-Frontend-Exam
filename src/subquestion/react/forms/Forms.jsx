@@ -1,6 +1,7 @@
+import Examples from "../../../components/examples/Examples";
+import KeyPoints from "../../../components/key-points/KeyPoints";
 import QuestionElement from "../../../components/question-element/QuestionElement";
 import ControlledFormExample from "./ControlledFormExample";
-import ErrorExample from "./ErrorExample";
 import UncontrolledFormExample from "./UncontrolledFormExample";
 
 function Forms() {
@@ -13,12 +14,25 @@ function Forms() {
           "3. Explain the role of the onChange event in form handling and show examples.",
         ]}
       />
+      <KeyPoints
+        keypoints={[
+          "Controlled: using React state management",
+          "Uncontrolled: refs, form submit event",
+        ]}
+      />
       <h3>Controlled Form</h3>
       <ControlledFormExample />
       <h3>Uncontrolled Form</h3>
       <UncontrolledFormExample />
-      <h3>Handling Errors</h3>
-      <ErrorExample />
+      <Examples
+        examples={[
+          {
+            type: "link",
+            content:
+              "https://github.com/Peter537/Dat3-DnD-Character-Builder/blob/dev/frontend/src/components/MyProfile/EditProfile.jsx#L38",
+          },
+        ]}
+      />
     </div>
   );
 }

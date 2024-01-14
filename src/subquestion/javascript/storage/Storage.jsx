@@ -1,5 +1,6 @@
 import { useState } from "react";
 import QuestionElement from "../../../components/question-element/QuestionElement";
+import KeyPoints from "../../../components/key-points/KeyPoints";
 
 function Storage() {
   const [sessionStorageName, setSessionStorageName] = useState("");
@@ -41,19 +42,17 @@ function Storage() {
           "1. What is the difference between localStorage and sessionStorage in JavaScript?",
         ]}
       />
+      <KeyPoints
+        keypoints={[
+          "local: gemt på computeren, kan bruges på flere sessions",
+          "session: gemt i session, clearet når Tab'en er lukket",
+        ]}
+      />
       <h3>Local Storage</h3>
-      <p>
-        local storage er gemt på computeren, kan bruges over flere sessioner
-        samtidig
-      </p>
       <button onClick={setLocalName}>Set Local Storage</button>
       <button onClick={removeLocalStorage}>Remove Local Storage</button>
       <p>{localStorageName}</p>
       <h3>Session Storage</h3>
-      <p>
-        session storage er gemt i sessionen, og clearet når browseren/tabben er
-        lukket
-      </p>
       <button onClick={setSessionName}>Set Session Storage</button>
       <button onClick={removeSessionStorage}>Remove Session Storage</button>
       <p>{sessionStorageName}</p>
