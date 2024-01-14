@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import { questions } from "./components/routes/Routes";
 import Questions from "./pages/questions/Questions";
 import Question from "./pages/question/Question";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Header />
       </header>
       <Routes>
-        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/" element={<Home />} />
         <Route path="/question" element={<Questions />}>
           {questions.map((question, index) => (
             <Route

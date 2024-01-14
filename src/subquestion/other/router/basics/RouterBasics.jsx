@@ -18,6 +18,7 @@ function RouterBasics() {
         keypoints={[
           "React (SPA) har ingen indbygget Router",
           "Ligner en MPA, men uden request til server hver gang",
+          "Stoppes serveren kan den stadig bruges eftersom alt er loaded ind",
         ]}
       />
       <Examples

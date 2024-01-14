@@ -37,6 +37,8 @@ Eftersom React er lavet til SPA, så er der ikke nogen routing indbygget.
 
 React Router er et tredjeparts bibliotek som giver mulighed for at lave routing i React, det er essentielt hvis man vil efterligne en multipage applikation uden at skulle lave en ny request til serveren hver gang.
 
+I form af React er SPA, så hvis man stopper programmet, så er alt loadet ind i initial load, så derfor kan man stadig godt bruge siden hvis man allerede er på den.
+
 5. Show an example of how routing works in React
 
 ## Question 2
