@@ -20,7 +20,9 @@ function SecurityJWT() {
           "Vores server verificerer token inden den giver respons",
         ]}
       />
-      <a href="https://jwt.io/">jwt.io</a>
+      <a href="https://jwt.io/" target="_blank" rel="noreferrer">
+        jwt.io
+      </a>
       <div>
         Eksempel token:
         <div>
